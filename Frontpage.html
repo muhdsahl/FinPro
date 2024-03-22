@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+  <meta charset="utf-8">
+  <title>FinPro</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500&family=Teko:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kenia&family=Playpen+Sans:wght@500&family=Teko:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <style>*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing:border-box;
+  }
+  body{
+    font-family:montserrat;
+  }
+  nav{
+    background: #040e16;
+    height: 80px;
+    width: 100%;
+  }
+  label.logo{
+    color:white;
+    font-size:35px;
+    line-height: 80px;
+    padding:0 100px;
+    font-weight:bold;
+  }
+  nav ul{
+    float:right;
+    margin-right:20px;
+  }
+  nav ul li {
+    display:inline-block;
+    line-height: 80px;
+    margin:0 5px;
+  }
+  nav ul li a{
+    color:white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background:#dcdfe2;
+    transition:.5s;
+  }
+  .checkbtn{
+    font-size:30px;
+    color:white;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor:pointer;
+    display:none;
+  }
+  #check{
+    display:none;
+  }
+  @media(max-width: 952px){
+    label.logo{
+      font-size:30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size:16px;
+
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display:block;
+    }
+    ul{
+      position:fixed;
+      width:100%;
+      height:100vh;
+      background: #2c3e50;
+      top:80px;
+      left:-100%;
+      text-align:center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background:none;
+      color: #1968a4
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  section{
+    background-color: rgb(59, 144, 229);
+    body:cover;
+
+  }
+  /* about1-------------------> */
+  .abt1{
+    background-color:rgb(59, 144, 229);
+    height: 500px;
+    text-align: left;
+  }
+
+  .text1{
+    padding: 100px;
+    font-size: 50px;
+    line-height:100px ;
+    font-family: Teko;
+  }
+
+  #pic1{
+    height: 500px;
+  }
+
+  .b1{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 17px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 25px auto; /* Center the button horizontally */
+    transition: 0.3s;
+    display: block; /* Change to block to center horizontally */
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 400px;
+  }
+
+  .b1:hover {
+    background-color:blue;
+  }
+
+  .b2:hover {
+    background-color:rgb(103, 166, 238);
+  }
+
+  span{
+     color: white;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .image-container {
+    flex: 1; /* Take up 1/2 of the container width for the image */
+  }
+
+  #pic2 {
+    max-width: 100%;
+    height: 70%;
+  }
+
+  .text-container {
+    flex: 1; /* Take up 1/2 of the container width for the text */
+    font-size: 25px;
+    line-height: 50px;
+    padding: 15px; /* Adjust padding to your preference */
+  }
+  .container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  img#pic3 {
+    max-width: 50%;
+    height: 250px;
+  }
+
+  .text-container3 {
+    text-align: left;
+
+  }
+
+  .heading3 {
+    font-size: 40px; /* Adjust the font size as needed */
+  }
+
+  .bullet-list {
+    text-align:left;
+    list-style-type: disc; /* You can change this to other values like 'circle', 'square', etc. */
+    font-size: 25px;
+    padding-right: 500px; /* Adjust the font size as needed */
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+  }
+  *{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  footer{
+    background-color: #111;
+
+  }
+  footercontainer{
+    width:100%;
+    padding:70px 30px 20px;
+
+  }
+  .social-icons{
+    display:flex;
+    justify-content: center;
+  }
+  .social-icons a{
+    text-decoration: none;
+    padding:10px;
+    background-color: white;
+    margin: 10px;
+    border-radius:50%;
+
+  }
+  .social-icons a i{
+    font-size: 2em;
+    color: rgb(86, 77, 77);
+    opacity: 0.9;
+  }
+  .social-icons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+  }
+  .social-icons a:hover i{
+    color:white;
+    transition:0.5s;
+
+  }
+  .footernav{
+    margin: 30px 0;
+  }
+  .footernav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type:nonedisc;
+  }
+  .footernav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  .footernav ul li a:hover{
+    opacity:1;
+  }
+  .footerbottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+  }
+  .footerbottom p{
+    color:white;
+  }
+  .designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+  }
+  @media (max-width: 700px){
+    .footernav ul{
+      flex-direction: column;
+    }
+    .footernav ul li{
+      width:100%;
+      text-align: center;
+      margin: 10px;
+          }
+  }
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+  </style>
+<script>
+	var slideIndex = 0;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+</head>
+<body>
+
+<nav>
+  <input type="checkbox" id="check">
+  <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+  <label class="logo" style="font-family: lobster;">FinPro</label>
+  <ul>
+    <li><a href="C:\Users\HP\Downloads\mainpage.html">Home</a></li>
+    <li><a href="C:\Users\HP\Downloads\career.html">Finance</a></li>
+    <li><a href="C:\Users\HP\Downloads\About-us.html">About us</a></li>
+    <li><a href="#footercontainer">Contact</a></li>
+  </ul>
+</nav>
+       
+
+
+<div class="abt1">
+  <img id='pic1' src="https://youragendaone.com/wp-content/uploads/2022/08/Fin-Planning-1024x683.jpg"alt="pic3" align="right">
+  <div class="text1">
+    <h1>Earn Save Invest</h1>
+    <h2>"Balancing your money is the key to having enough"</h2>
+    
+</div>
+  <div class="container">
+    <div class="image-container">
+      <img id="pic2" src="https://www.entrepreneurshipinabox.com/wp-content/uploads/funding-venture-1024x669.jpg"  alt="laptop with cup of coffee and notebook">
+    </div>
+    <div class="text-container">
+      <h1>Your go to Financial Management solution.<br>
+        Control your finances effortlessly.<br>
+        with our intuitive tools<br>
+        and expert guidance.</h1>
+      
+    </div>
+  </div>
+  <div class="container" style="background-color: rgb(61, 144, 212);">
+    <div class="text-container3">
+      <u><h1 class="heading3"style="font-family:lobster,serif"> Strategy regarding Financial Management</h1></u>
+      <ul type="disc"class="bullet-list">
+        <li>Define Your Goals</li>
+        <li>Know Your Accounts</li>
+        <li>Choose the right platform</li>
+        <li>Financial Strategy</li>
+        <li>Work on your savings</li>
+        <li>Compliance And Data Privacy</li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div class="footercontainer" id="footercontainer">
+      <div class="social-icons">
+        <a onclick="window.open('https://www.facebook.com/','_blank')" ><i class="fa-brands fa-facebook"></i></a>
+        <a onclick="window.open('https://www.instagram.com/','_blank')" ><i class="fa-brands fa-instagram"></i></a>
+        <a onclick="window.open('https://www.twitter.com/','_blank')"><i class="fa-brands fa-twitter"></i></a>
+        <a onclick="window.open('https://www.youtube.com/','_blank')" ><i class="fa-brands fa-youtube"></i></a>
+	
+      </div>
+      <div class="footernav">
+        <ul>
+          <li><a href="C:\Users\HP\Downloads\mainpage.html">Home</a></li>
+          <li><a href="C:\Users\HP\Downloads\career.html">Finance</a></li>
+          <li><a href="C:\Users\HP\Downloads\About-us.html">About us</a></li>
+          <li><a href="#footercontainer">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+	<h3 style="color:white; text-align:center">Call Now: 7902202985<br>
+Email : finpro@gmail.com</h3>
+    <div class="footerbottom">
+      <p>Copyright &copy;2023</p>
+    </div>
+  </footer>
+</body>
+</html>
